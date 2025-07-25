@@ -1,0 +1,1 @@
+export { ServiceDetailedPage } from './ui';

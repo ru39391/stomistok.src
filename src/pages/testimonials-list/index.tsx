@@ -1,0 +1,1 @@
+export { TestimonialsListPage } from './ui';

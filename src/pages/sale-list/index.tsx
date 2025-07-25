@@ -1,0 +1,1 @@
+export { SaleListPage } from './ui';

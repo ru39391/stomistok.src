@@ -1,0 +1,1 @@
+export { ArticleDetailedPage } from './ui';

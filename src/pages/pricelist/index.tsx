@@ -1,0 +1,1 @@
+export { PricelistPage } from './ui';
