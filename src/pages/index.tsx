@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
-// import { MainPage } from './main';
+import { HomePage } from '@pages/home';
 
 const Router: FC = () => {
-  return <p>Router</p>;
+  return <HomePage />;
 };
 
 export default Router;

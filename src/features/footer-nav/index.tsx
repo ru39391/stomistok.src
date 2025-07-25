@@ -1,0 +1,1 @@
+export { FooterNav } from './ui';
