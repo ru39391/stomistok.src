@@ -1,11 +1,10 @@
 import { FC } from 'react';
 
 import { Layout } from '@widgets/layout';
+import { Depts } from '@features/depts';
 
 const HomePage: FC = () => {
-  return <Layout />;
+  return <Layout><Depts /></Layout>;
 };
 
-export {
-  HomePage
-};
+export default HomePage;

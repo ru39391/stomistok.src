@@ -3,15 +3,16 @@ import { FC } from 'react';
 import { Header } from '@widgets/header';
 import { Footer } from '@widgets/footer';
 
-const Layout: FC = () => {
+import type { ILayout } from '../model/types';
+
+const Layout: FC<ILayout> = ({ children }) => {
   return (
     <>
       <Header />
+      {children}
       <Footer />
     </>
   );
 };
 
-export {
-  Layout
-};
+export default Layout;
