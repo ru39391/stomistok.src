@@ -1,1 +1,1 @@
-export { SearchForm } from './ui';
+export { default as SearchForm } from './ui';

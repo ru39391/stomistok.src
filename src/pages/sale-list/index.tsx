@@ -1,1 +1,1 @@
-export { SaleListPage } from './ui';
+export { default as SaleListPage } from './ui';

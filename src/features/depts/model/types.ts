@@ -3,9 +3,9 @@ import type { TResourceData } from '@shared/types';
 export type TDeptData = TResourceData & { children: TResourceData[] }
 
 export interface IDeptList {
-  id: TDeptData['id'];
-  title: TDeptData['pagetitle'];
-  subdepts: TDeptData['children'];
+  id: TResourceData['id'];
+  title: TResourceData['pagetitle'];
+  subdepts: TResourceData[];
 }
 
 export interface IDeptsData {

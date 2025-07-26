@@ -4,6 +4,4 @@ const DoctorListPage: FC = () => {
   return <p>DoctorListPage</p>;
 };
 
-export {
-  DoctorListPage
-};
+export default DoctorListPage;

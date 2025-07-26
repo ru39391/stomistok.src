@@ -4,6 +4,4 @@ const SearchForm: FC = () => {
   return <p>SearchForm</p>;
 };
 
-export {
-  SearchForm
-};
+export default SearchForm;

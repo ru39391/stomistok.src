@@ -4,6 +4,4 @@ const ServiceDetailedPage: FC = () => {
   return <p>ServiceDetailedPage</p>;
 };
 
-export {
-  ServiceDetailedPage
-};
+export default ServiceDetailedPage;

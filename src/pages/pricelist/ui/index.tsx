@@ -4,6 +4,4 @@ const PricelistPage: FC = () => {
   return <p>PricelistPage</p>;
 };
 
-export {
-  PricelistPage
-};
+export default PricelistPage;

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import type { IHighlightItem } from '../model/types';
+import type { IHighlightsItem } from '../model/types';
 
-const HighlightItem: FC<IHighlightItem> = ({ name, img, url }) => {
+const HighlightsItem: FC<IHighlightsItem> = ({ name, img, url }) => {
   const isVisible = false;
 
   return (
@@ -15,4 +15,4 @@ const HighlightItem: FC<IHighlightItem> = ({ name, img, url }) => {
   )
 };
 
-export default HighlightItem;
+export default HighlightsItem;

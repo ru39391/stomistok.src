@@ -1,1 +1,0 @@
-export { ServiceListPage } from './ui';

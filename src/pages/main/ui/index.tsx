@@ -4,6 +4,4 @@ const MainPage: FC = () => {
   return <p>MainPage</p>;
 };
 
-export {
-  MainPage
-};
+export default MainPage;

@@ -1,1 +1,1 @@
-export { FooterNav } from './ui';
+export { default as FooterNav } from './ui';

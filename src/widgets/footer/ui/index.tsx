@@ -4,6 +4,4 @@ const Footer: FC = () => {
   return <p>Footer</p>;
 };
 
-export {
-  Footer
-};
+export default Footer;

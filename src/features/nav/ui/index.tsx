@@ -4,6 +4,4 @@ const Nav: FC = () => {
   return <p>Nav</p>;
 };
 
-export {
-  Nav
-};
+export default Nav;

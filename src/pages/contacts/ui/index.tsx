@@ -4,6 +4,4 @@ const ContactsPage: FC = () => {
   return <p>ContactsPage</p>;
 };
 
-export {
-  ContactsPage
-};
+export default ContactsPage;

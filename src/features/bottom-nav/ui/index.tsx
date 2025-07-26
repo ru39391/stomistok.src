@@ -4,6 +4,4 @@ const BottomNav: FC = () => {
   return <p>BottomNav</p>;
 };
 
-export {
-  BottomNav
-};
+export default BottomNav;

@@ -1,1 +1,0 @@
-export { SaleDetailedPage } from './ui';

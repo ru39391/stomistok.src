@@ -4,6 +4,4 @@ const SaleDetailedPage: FC = () => {
   return <p>SaleDetailedPage</p>;
 };
 
-export {
-  SaleDetailedPage
-};
+export default SaleDetailedPage;

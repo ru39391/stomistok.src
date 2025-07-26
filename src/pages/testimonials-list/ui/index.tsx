@@ -4,6 +4,4 @@ const TestimonialsListPage: FC = () => {
   return <p>TestimonialsListPage</p>;
 };
 
-export {
-  TestimonialsListPage
-};
+export default TestimonialsListPage;
