@@ -1,7 +1,5 @@
-type TRedirectData = Record<string, string>;
+import type { TPlainData } from './base';
 
-type TSeoData = Record<string, string>;
+export type TResourceData = Record<'id' | 'menuindex', number> & Record<string, string> & { pics: TPlainData[]; redirect: TPlainData; seo: TPlainData; };
 
-type TPicsData = Record<string, string>;
-
-export type TResourceData = Record<'id' | 'menuindex', number> & Record<string, string> & { pics: TPicsData[]; redirect: TRedirectData; seo: TSeoData; };
+export type TResourceResData = { success: boolean; data: TResourceData[] };

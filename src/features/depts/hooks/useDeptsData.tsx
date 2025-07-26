@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import fetchDeptsData from '../api/fetchDeptsData';
 import type { IDeptsData } from '../model/types';
 
+// TODO: стандартизировать useDeptsData
 const useDeptsData = (): IDeptsData => {
   const [deptsList, setDeptsList] = useState<IDeptsData['deptsList']>([]);
   const [isDeptsLoading, setDeptsLoading] = useState<IDeptsData['isDeptsLoading']>(false);
