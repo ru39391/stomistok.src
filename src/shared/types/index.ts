@@ -1,2 +1,3 @@
-export type { IPlainData, TPlainData } from './base';
-export type { TItemsData, TResourceData, TResourceResData } from './resource';
+export * from './base';
+export * from './items';
+export * from './resource';

@@ -1,7 +1,3 @@
-import type { TResourceData } from '@shared/types';
+import type { TResourceData, TResourceResData } from '@shared/types';
 
-export type TDeptData = {
-  id: TResourceData['id'];
-  title: TResourceData['pagetitle'];
-  subdepts: TResourceData[];
-}
+export type TDeptResData = Omit<TResourceResData, 'data'> & { data: (TResourceData & { children: TResourceData[] })[]; };

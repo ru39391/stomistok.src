@@ -1,4 +1,4 @@
-import type { TDeptResData } from '@shared/types';
+import type { TDeptResData } from '../types';
 
 const fetchDeptsData = (): Promise<TDeptResData> =>
   new Promise((resolve) => {
