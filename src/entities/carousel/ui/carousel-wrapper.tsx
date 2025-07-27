@@ -1,14 +1,18 @@
 import { FC } from 'react';
 
 import CarouselItem from './carousel-item';
-import type { ICarouselWrapper } from '../model/types';
+import { CarouselTitle } from '../';
+import type { ICarouselWrapper } from '../types';
 
-const CarouselWrapper: FC<ICarouselWrapper> = ({ items, title, url }) => {
+const CarouselWrapper: FC<ICarouselWrapper> = ({ items, title, url, children, heading }) => {
   return (
     <div className="container">
-      <a className="subtitle text-uppercase" href={url}>{title}</a>
+      {heading || <CarouselTitle title={title} url={url} />}
       <div className="carousel text-center">
-        {items.map(({ id, introtext, pagetitle, pics, uri }) => <CarouselItem key={id.toString()} name={pagetitle} desc={introtext} pics={pics[0]} url={uri} />)}
+        {Array.isArray(items)
+          ? items.map(({ id, introtext, pagetitle, pics, uri }) => <CarouselItem key={id.toString()} name={pagetitle} desc={introtext} pics={pics[0]} url={uri} />)
+          : children
+        }
       </div>
     </div>
   )
