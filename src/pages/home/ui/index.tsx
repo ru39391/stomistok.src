@@ -7,7 +7,6 @@ import { Doctors } from '@features/doctors';
 const HomePage: FC = () => {
   return (
     <Layout>
-      <Doctors />
       <Depts />
     </Layout>
   )

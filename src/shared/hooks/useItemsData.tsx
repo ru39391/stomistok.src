@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
 import { HANDLERS } from '@shared/constants';
-import type { TResourceResData } from '@shared/types';
+import type { TItemsData } from '@shared/types';
 
-const useItemsData = (key: string): TResourceResData => {
-  const [itemsList, setItemsList] = useState<TResourceResData['data']>([]);
-  const [isLoading, setLoading] = useState<TResourceResData['success']>(false);
+const useItemsData = (key: string): TItemsData => {
+  const [itemsList, setItemsList] = useState<TItemsData['itemsList']>([]);
+  const [isLoading, setLoading] = useState<TItemsData['isLoading']>(false);
 
   const handleItemsData = async () => {
     setLoading(true);

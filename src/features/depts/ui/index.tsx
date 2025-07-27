@@ -1,18 +1,19 @@
 import { FC } from 'react';
 
-import useDeptsData from '../hooks/useDeptsData';
+import { useItemsData } from '@shared/hooks';
 import { HighlightsWrapper } from '@entities/highlights';
+import handleDeptsList from '../lib/handleDeptsList';
 
 const Depts: FC = () => {
-  const { isDeptsLoading, deptsList } = useDeptsData();
+  const { isLoading, itemsList } = useItemsData('depts');
 
-  if(isDeptsLoading) {
+  if(isLoading) {
     return '';
   }
 
   return (
     <div className="highlights border-0 row align-items-start px-0 px-sm-3 px-lg-0">
-      {deptsList.map(item => <HighlightsWrapper key={item.id.toString()} {...item} />)}
+      {handleDeptsList(itemsList).map(item => <HighlightsWrapper key={item.id.toString()} {...item} />)}
     </div>
   )
 };

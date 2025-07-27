@@ -1,6 +1,6 @@
-import type { TDeptData } from '../model/types';
+import type { TDeptResData } from '@shared/types';
 
-const fetchDeptsData = (): Promise<{ success: boolean; data: TDeptData[]; }> =>
+const fetchDeptsData = (): Promise<TDeptResData> =>
   new Promise((resolve) => {
     setTimeout(
       () =>
