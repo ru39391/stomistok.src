@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
-import { useItemsData } from '@shared/hooks';
-import { CarouselTitle, CarouselWrapper } from '@entities/carousel';
+import { CarouselTitle } from '@entities/carousel';
 
 const TestimonialsHeading: FC = () => {
   return (
@@ -14,18 +13,4 @@ const TestimonialsHeading: FC = () => {
   )
 };
 
-const Testimonials: FC = () => {
-  const { isLoading, itemsList } = useItemsData('testimonials');
-
-  if(isLoading) {
-    return '';
-  }
-
-  return (
-    <CarouselWrapper heading={<TestimonialsHeading />} title="Отзывы наших пациентов" url="otzyivyi">
-      {itemsList.map(({ name }) => <p>{name}</p>)}
-    </CarouselWrapper>
-  )
-};
-
-export default Testimonials;
+export default TestimonialsHeading;
