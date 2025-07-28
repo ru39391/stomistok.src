@@ -8,3 +8,8 @@ export interface ITestimonialsContent {
   desc: string;
   isExpanderVisible: boolean;
 }
+
+export interface ITestimonialsHeading {
+  title: string;
+  url: string;
+}

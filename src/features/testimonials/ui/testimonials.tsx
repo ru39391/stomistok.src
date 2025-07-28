@@ -14,9 +14,9 @@ const Testimonials: FC = () => {
   }
 
   return (
-    <CarouselWrapper heading={<TestimonialsHeading />} title="Отзывы наших пациентов" url="otzyivyi">
+    <CarouselWrapper heading={<TestimonialsHeading title="Отзывы наших пациентов" url="otzyivyi" />} title="" url="">
       {handleTestimonialData(itemsList).map(
-        (item) => <TestimonialItem key={item.id.toString()} {...item}><TestimonialsContent {...item.props} isExpanderVisible={item.isExpanderVisible} /></TestimonialItem>
+        ({ isExpanderVisible, ...item }) => <TestimonialItem key={item.id.toString()} {...item}><TestimonialsContent {...item.props} isExpanderVisible={isExpanderVisible} /></TestimonialItem>
       )}
     </CarouselWrapper>
   )

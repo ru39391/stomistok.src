@@ -8,7 +8,7 @@ import type { ILayout } from '../model/types';
 const Layout: FC<ILayout> = ({ children }) => {
   return (
     <>
-      <Header />
+      <Header /><hr />
       {children}
       <Footer />
     </>

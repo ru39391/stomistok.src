@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Picture } from '@shared/ui';
-import type { ICarouselItem } from '../model/types';
+import type { ICarouselItem } from '../types';
 
 const CarouselItem: FC<ICarouselItem> = ({ name, desc, pics, url }) => {
   return (
