@@ -1,0 +1,7 @@
+@import './fonts.css';
+
+@import 'tailwindcss';
+
+@theme {
+  --default-font-family: "Montserrat", sans-serif;
+}

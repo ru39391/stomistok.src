@@ -9,16 +9,16 @@ const Nav: FC = () => {
     return '';
   }
 
-  console.log(itemsList);
+  console.log(itemsList[0]);
 
   return (
-    <nav className="header__menu offset-md-3 offset-lg-0" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
-      <div className="container d-md-flex flex-wrap">
-        <div className="affix__menu col-12 d-lg-flex flex-wrap px-0">
-          {itemsList.map(({ pagetitle }) => <li>{pagetitle}</li>)}
-        </div>
-      </div>
-    </nav>
+    <div className="flex flex-row">
+      <a className="logo" href="/">
+      </a>
+      <nav className="flex flex-row">
+        {itemsList.map(({ id, menutitle, pagetitle, uri }) => <a key={id.toString()} href={uri}>{menutitle || pagetitle}</a>)}
+      </nav>
+    </div>
   )
 };
 
