@@ -1,0 +1,33 @@
+@reference '../../../shared/styles/helpers/utils.css';
+
+.social-item {
+  @apply d-flex-column d-flex-centered p-[16px] max-w-[50px] h-auto rounded-[50%];
+  flex: 0 0 50px;
+  color: var(--color-white);
+  background-color: --alpha(var(--color-slate-200) / 60%);
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: var(--color-cyan-400);
+  }
+}
+
+.social-wrapper_type_group {
+  .social-item {
+    @apply max-w-[48px] rounded-none;
+    color: var(--color-black);
+    background-color: --alpha(var(--color-slate-200) / 60%);
+
+    &:first-child {
+      @apply pl-[22px] pr-[10px] rounded-s-[50%];
+    }
+
+    &:last-child {
+      @apply pl-[10px] pr-[22px] rounded-e-[50%];
+    }
+
+    &:hover {
+      color: var(--color-cyan-500);
+    }
+  }
+}

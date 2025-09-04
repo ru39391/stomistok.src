@@ -1,0 +1,5 @@
+@reference '../../../shared/styles/helpers/utils.css';
+
+.social-wrapper {
+  @apply d-flex-ai-center;
+}

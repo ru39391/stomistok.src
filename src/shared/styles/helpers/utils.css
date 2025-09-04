@@ -1,0 +1,24 @@
+@utility d-flex-wrap {
+  @apply flex;
+  @apply flex-wrap;
+}
+
+@utility d-flex-nowrap {
+  @apply flex;
+  @apply flex-nowrap;
+}
+
+@utility d-flex-ai-center {
+  @apply flex;
+  @apply items-center;
+}
+
+@utility d-flex-column {
+  @apply flex;
+  @apply flex-col;
+}
+
+@utility d-flex-centered {
+  @apply justify-center;
+  @apply items-center;
+}

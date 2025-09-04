@@ -5,6 +5,8 @@ import { useItemsData } from '@shared/hooks';
 import { OkIcon, TelegramIcon, VkIcon } from '@shared/icons';
 import type { ISocialList } from '../types';
 
+import './index.css';
+
 const SocialList: FC<ISocialList> = ({ classMod }) => {
   const { isLoading, itemsList } = useItemsData('social');
 

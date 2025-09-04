@@ -1,6 +1,7 @@
 @import './fonts.css';
 
 @import 'tailwindcss';
+@import './helpers/mixes.css';
 
 @theme {
   --default-font-family: "Montserrat", sans-serif;
