@@ -7,8 +7,10 @@ import { SocialList } from '@features/Social';
 const Header: FC = () => {
   return (
     <>
-      <div className="flex flex-row justify-between items-center p-5">
-        <SocialList classMod="social-wrapper_type_group" />
+      <div className="flex justify-between xl:grid xl:grid-cols-2 2xl:grid-cols-3 items-center border-b-1 border-zinc-300 p-5">
+        <div className="hidden md:block xl:col-auto 2xl:col-span-2">
+          <SocialList classMod="social-wrapper_type_group" />
+        </div>
         <ContactsList />
       </div>
       <Nav />

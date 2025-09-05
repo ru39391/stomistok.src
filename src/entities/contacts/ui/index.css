@@ -1,5 +1,4 @@
 @reference '../../../shared/styles/helpers/utils.css';
 
-.contacts-item {
-  @apply d-flex-column;
+.contacts-item__link {
 }

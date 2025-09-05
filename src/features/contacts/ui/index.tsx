@@ -16,10 +16,10 @@ const ContactsList: FC<IContactsList> = () => {
   }
 
   return (
-    <div className="contacts-wrapper flex flex-row">
-      <ContactsItem caption="Позвоните нам:" value={phone} url={`tel:${phone}`} />
-      <ContactsItem caption="Напишите нам:" value={email} url={`mailto:${email}`} />
-      <ContactsItem caption="Время работы:" value={handleOpenHours(open || [])} />
+    <div className="contacts-wrapper flex justify-between gap-6 xl:gap-1">
+      <ContactsItem caption="Позвоните нам" value={phone} url={`tel:${phone}`} isColored={true} />
+      <ContactsItem caption="Напишите нам" value={email} url={`mailto:${email}`} />
+      <ContactsItem caption="Время работы" value={handleOpenHours(open || [])} />
     </div>
   );
 };
