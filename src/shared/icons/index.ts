@@ -1,4 +1,5 @@
 export { default as CloseIcon } from './ui/close-icon';
+export { default as EditIcon } from './ui/edit-icon';
 export { default as EmailIcon } from './ui/email-icon';
 export { default as LogoIcon } from './ui/logo-icon';
 export { default as NavIcon } from './ui/nav-icon';

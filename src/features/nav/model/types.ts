@@ -7,3 +7,7 @@ export type TNavResData = Omit<TResourceResData, 'data'> & {
   };
 };
 
+export interface INavToggler {
+  isNavHidden: boolean;
+  handleClick: () => void;
+}

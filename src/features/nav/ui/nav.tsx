@@ -1,9 +1,12 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-import { LogoIcon } from '@shared/icons';
+import { Logo } from '@features/logo';
+import { EditIcon } from '@shared/icons';
 import { useItemsData } from '@shared/hooks';
+import { NavToggler } from './';
 
 const Nav: FC = () => {
+  const [isNavHidden, setNavHidden] = useState(true);
   const { isLoading, itemsList: { site, nav } } = useItemsData('nav');
 
   if(isLoading) {
@@ -11,31 +14,29 @@ const Nav: FC = () => {
   }
 
   return (
-    <div className="flex flex-wrap justify-between items-start p-4 lg:static lg:flex-row lg:items-center lg:py-5 lg:gap-12">
-      <a className="flex flex-row items-center order-1 gap-2" href={site?.url}>
-        <span className="btn-icon p-px py-0 text-cyan-600"><LogoIcon /></span>
-        <span className="flex flex-col">
-          <span className="text-blue-950 text-3xl font-bold">{site?.name}</span>
-          <span className="text-cyan-800 text-xs">{site?.desc}</span>
-        </span>
-      </a>
-      <nav className="flex flex-col grow order-3 lg:order-2 lg:flex-row lg:justify-end lg:items-center xl:justify-center lg:gap-12">
+    <div className="flex flex-wrap justify-between items-center sticky top-0 z-1 p-4 bg-white lg:py-5 lg:gap-12">
+      {site && <Logo {...site} />}
+      <nav className={`flex-col justify-center w-full absolute left-0 top-[100%] bg-white lg:flex lg:w-auto lg:static lg:flex-row lg:items-center lg:gap-12 ${isNavHidden ? 'hidden' : 'flex'}`}>
         {Array.isArray(nav) && nav.map(
           ({
             id,
             menutitle,
             pagetitle,
             uri
-          }) => <a key={id.toString()} className="transition border-transparent py-4 font-semibold text-neutral-700 hover:text-cyan-600 hover:border-cyan-600 lg:border-b-1 lg:py-0 lg:pb-1" href={uri}>{menutitle || pagetitle}</a>
+          }) => <a key={id.toString()} className="px-4 transition border-transparent py-4 font-semibold text-neutral-700 hover:text-cyan-600 hover:border-cyan-600  lg:px-0 xl:border-b-1 xl:py-0 xl:pb-1" href={uri}>{menutitle || pagetitle}</a>
         )}
       </nav>
-      <button
-        className="btn flex order-2 px-5 py-4 text-white bg-cyan-600 hover:bg-blue-950 lg:order-3 lg:hidden xl:flex"
-        type="button"
-        title="Записаться на приём"
-      >
-        Записаться на приём
-      </button>
+      <div className="flex gap-2">
+        <button
+          className="flex"
+          type="button"
+          title="Записаться на приём"
+        >
+          <span className="btn-icon text-white bg-blue-950 xl:hidden"><EditIcon /></span>
+          <span className="btn px-5 py-4 text-white bg-cyan-600 hover:bg-blue-950 hidden xl:flex">Записаться на приём</span>
+        </button>
+        <NavToggler isNavHidden={isNavHidden} handleClick={() => setNavHidden(!isNavHidden)} />
+      </div>
     </div>
   )
 };
