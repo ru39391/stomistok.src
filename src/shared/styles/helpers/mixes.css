@@ -1,6 +1,18 @@
+@reference './utils.css';
+
 @layer components {
   .icon-fluid {
     max-width: 100%;
     height: auto;
+  }
+
+  .btn-icon {
+    @apply d-flex-centered p-[12px] max-w-[44px] h-auto rounded-[50%];
+    cursor: pointer;
+  }
+
+  .btn {
+    @apply d-flex-centered font-semibold rounded-full transition;
+    cursor: pointer;
   }
 }
