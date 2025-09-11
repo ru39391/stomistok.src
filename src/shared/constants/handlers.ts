@@ -7,6 +7,7 @@ import fetchTestimonialsData from '@features/testimonials/api/fetchTestimonialsD
 // TODO: разграничить эндпойнты навигации и данных контактов
 import fetchLogoData from '@features/logo/api/fetchLogoData';
 import fetchNavData from '@features/nav/api/fetchNavData';
+import fetchFooterNavData from '@features/nav/api/fetchFooterNavData';
 import fetchSocialData from '@features/social/api/fetchSocialData';
 
 const HANDLERS = {
@@ -16,6 +17,7 @@ const HANDLERS = {
   testimonials: fetchTestimonialsData(),
   logo: fetchLogoData(),
   nav: fetchNavData(),
+  footerNav: fetchFooterNavData(),
   social: fetchSocialData(),
   contacts: fetchContactsData(),
   copyright: fetchCopyrightData(),

@@ -1,3 +1,4 @@
+export { default as ArrowIcon } from './ui/arrow-icon';
 export { default as CloseIcon } from './ui/close-icon';
 export { default as EditIcon } from './ui/edit-icon';
 export { default as EmailIcon } from './ui/email-icon';

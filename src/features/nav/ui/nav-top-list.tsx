@@ -4,7 +4,7 @@ import { EditIcon } from '@shared/icons';
 import { useItemsData } from '@shared/hooks';
 import { NavToggler } from './';
 
-const Nav: FC = () => {
+const NavTopList: FC = () => {
   const [isNavHidden, setNavHidden] = useState(true);
   const { isLoading, itemsList: nav } = useItemsData('nav');
 
@@ -39,4 +39,4 @@ const Nav: FC = () => {
   )
 };
 
-export default Nav;
+export default NavTopList;

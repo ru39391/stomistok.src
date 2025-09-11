@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
 import { Logo } from '@features/logo';
-import { Nav } from '@features/Nav';
-import { ContactsList } from '@features/Contacts';
-import { SocialList } from '@features/Social';
+import { NavTopList } from '@features/nav';
+import { ContactsTopList } from '@features/contacts';
+import { SocialList } from '@features/social';
 
 const Header: FC = () => {
   return (
@@ -12,11 +12,11 @@ const Header: FC = () => {
         <div className="xl:col-auto 2xl:col-span-2">
           <SocialList classMod="social-wrapper_type_group" />
         </div>
-        <ContactsList />
+        <ContactsTopList />
       </header>
       <div className="flex flex-wrap justify-between items-center sticky top-0 z-1 p-4 bg-white lg:py-5 lg:gap-12">
         <Logo />
-        <Nav />
+        <NavTopList />
       </div>
     </>
   );

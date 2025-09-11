@@ -1,1 +1,1 @@
-export { default as ContactsList } from './ui';
+export * from './ui';
