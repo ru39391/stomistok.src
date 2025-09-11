@@ -1,21 +1,19 @@
 import { FC, useState } from 'react';
 
-import { Logo } from '@features/logo';
 import { EditIcon } from '@shared/icons';
 import { useItemsData } from '@shared/hooks';
 import { NavToggler } from './';
 
 const Nav: FC = () => {
   const [isNavHidden, setNavHidden] = useState(true);
-  const { isLoading, itemsList: { site, nav } } = useItemsData('nav');
+  const { isLoading, itemsList: nav } = useItemsData('nav');
 
   if(isLoading) {
     return '';
   }
 
   return (
-    <div className="flex flex-wrap justify-between items-center sticky top-0 z-1 p-4 bg-white lg:py-5 lg:gap-12">
-      {site && <Logo {...site} />}
+    <>
       <nav className={`flex-col justify-center w-full absolute left-0 top-[100%] bg-white lg:flex lg:w-auto lg:static lg:flex-row lg:items-center lg:gap-12 ${isNavHidden ? 'hidden' : 'flex'}`}>
         {Array.isArray(nav) && nav.map(
           ({
@@ -37,7 +35,7 @@ const Nav: FC = () => {
         </button>
         <NavToggler isNavHidden={isNavHidden} handleClick={() => setNavHidden(!isNavHidden)} />
       </div>
-    </div>
+    </>
   )
 };
 

@@ -10,7 +10,7 @@ const Copyright: FC = () => {
   }
 
   return (
-    <div className="flex flex-col justify-between gap-2 py-8 xl:flex-row xl:items-center">
+    <div className="wrapper flex flex-col justify-between gap-2 py-8 xl:flex-row xl:items-center">
       {copyright && <div className="text-sm">&copy; {copyright?.year} {copyright?.name}. {copyright?.desc}</div>}
       {Array.isArray(nav) && <nav className="flex flex-col gap-x-6 md:flex-row md:items-center">
         {nav.map(
