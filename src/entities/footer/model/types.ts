@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export interface IFooterSection {
-  caption: string;
+  caption?: string;
   children: ReactNode;
   classMod?: string;
 }

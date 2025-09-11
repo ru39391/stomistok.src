@@ -6,7 +6,7 @@ export interface IContactsIcon {
 }
 
 export interface IContactsItem {
-  caption: string;
+  caption?: string;
   value?: string;
   classMod?: string;
   url?: string;

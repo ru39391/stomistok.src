@@ -8,9 +8,12 @@ import fetchTestimonialsData from '@features/testimonials/api/fetchTestimonialsD
 import fetchLogoData from '@features/logo/api/fetchLogoData';
 import fetchNavData from '@features/nav/api/fetchNavData';
 import fetchFooterNavData from '@features/nav/api/fetchFooterNavData';
+import fetchPhonesData from '@features/contacts/api/fetchPhonesData';
 import fetchSocialData from '@features/social/api/fetchSocialData';
 
 const HANDLERS = {
+  contacts: fetchContactsData(),
+  copyright: fetchCopyrightData(),
   depts: fetchDeptsData(),
   doctors: fetchDoctorsData(),
   hardware: fetchHardwareData(),
@@ -18,9 +21,8 @@ const HANDLERS = {
   logo: fetchLogoData(),
   nav: fetchNavData(),
   footerNav: fetchFooterNavData(),
+  phones: fetchPhonesData(),
   social: fetchSocialData(),
-  contacts: fetchContactsData(),
-  copyright: fetchCopyrightData(),
 }
 
 export default HANDLERS;

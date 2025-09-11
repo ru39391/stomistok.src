@@ -4,6 +4,8 @@ export type TContactsData = Record<'phone' | 'email', string> & { open: Record<s
 
 export type TContactsResData = Omit<TResourceResData, 'data'> & { data: TContactsData; };
 
+export type TPhonesResData = Omit<TResourceResData, 'data'> & { data: { open: TContactsData['open']; phones: string[]; } };
+
 export interface IContactsList {
   classMod?: string;
 }
