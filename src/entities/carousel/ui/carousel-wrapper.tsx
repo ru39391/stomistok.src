@@ -6,7 +6,7 @@ import type { ICarouselWrapper } from '../types';
 
 const CarouselWrapper: FC<ICarouselWrapper> = ({ items, title, url, children, heading }) => {
   return (
-    <div className="container">
+    <div className="wrapper">
       {heading || <CarouselTitle title={title} url={url} />}
       <div className="carousel text-center">
         {Array.isArray(items)

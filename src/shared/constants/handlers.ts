@@ -1,4 +1,5 @@
 import fetchContactsData from '@features/contacts/api/fetchContactsData';
+import fetchCopyrightData from '@features/copyright/api/fetchCopyrightData';
 import fetchDeptsData from '@features/depts/api/fetchDeptsData';
 import fetchDoctorsData from '@features/doctors/api/fetchDoctorsData';
 import fetchHardwareData from '@features/hardware/api/fetchHardwareData';
@@ -15,6 +16,7 @@ const HANDLERS = {
   nav: fetchNavData(),
   social: fetchSocialData(),
   contacts: fetchContactsData(),
+  copyright: fetchCopyrightData(),
 }
 
 export default HANDLERS;

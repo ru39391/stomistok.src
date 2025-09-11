@@ -1,13 +1,17 @@
 @reference './utils.css';
 
 @layer components {
+  .wrapper {
+    @apply w-full mx-auto px-4 md:max-w-7xl lg:px-5;
+  }
+
   .icon-fluid {
     max-width: 100%;
     height: auto;
   }
 
   .btn-icon {
-    @apply d-flex-centered p-[12px] max-w-[44px] h-auto rounded-[50%];
+    @apply d-flex-centered p-[12px] max-w-[44px] flex-[0_0_44px] h-auto rounded-[50%];
     cursor: pointer;
   }
 

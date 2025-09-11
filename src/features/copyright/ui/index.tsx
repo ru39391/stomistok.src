@@ -1,0 +1,24 @@
+import { FC } from 'react';
+
+import { useItemsData } from '@shared/hooks';
+
+const Copyright: FC = () => {
+  const { isLoading, itemsList: { copyright, nav } } = useItemsData('copyright');
+
+  if(isLoading) {
+    return '';
+  }
+
+  return (
+    <div className="flex flex-col justify-between gap-2 py-8 xl:flex-row xl:items-center">
+      {copyright && <div className="text-sm">&copy; {copyright?.year} {copyright?.name}. {copyright?.desc}</div>}
+      {Array.isArray(nav) && <nav className="flex flex-col gap-x-6 md:flex-row md:items-center">
+        {nav.map(
+          ({ id, pagetitle, uri }) => <a key={id.toString()} className="text-xs py-3" href={uri}><span className="border-b-1 border-white">{pagetitle}</span></a>)
+        }
+      </nav>}
+    </div>
+  );
+};
+
+export default Copyright;

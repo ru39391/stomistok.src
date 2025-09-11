@@ -1,7 +1,7 @@
 @reference '../../../shared/styles/helpers/utils.css';
 
 .social-item {
-  @apply d-flex-column d-flex-centered p-[16px] max-w-[50px] h-auto rounded-[50%];
+  @apply d-flex-column d-flex-centered p-[16px] max-w-[50px] flex-[0_0_50px] h-auto rounded-[50%];
   flex: 0 0 50px;
   color: var(--color-white);
   background-color: --alpha(var(--color-slate-200) / 60%);
@@ -14,7 +14,7 @@
 
 .social-wrapper_type_group {
   .social-item {
-    @apply max-w-[48px] rounded-none;
+    @apply max-w-[48px] flex-[0_0_48px] rounded-none;
     color: var(--color-black);
     background-color: --alpha(var(--color-slate-200) / 60%);
 
