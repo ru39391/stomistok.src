@@ -21,6 +21,7 @@ const ContactsTopList: FC<IContactsList> = ({ classMod }) => {
       <ContactsItem
         caption="Позвоните нам"
         classMod="md:text-red-600 hover:border-red-600"
+        isCaptionHidden={true}
         url={`tel:${phone}`}
       >
         <ContactsIcon icon={<PhoneIcon />} value={phone} />
@@ -28,12 +29,14 @@ const ContactsTopList: FC<IContactsList> = ({ classMod }) => {
       <ContactsItem
         caption="Напишите нам"
         classMod="hover:border-black"
+        isCaptionHidden={true}
         url={`mailto:${email}`}
       >
         <ContactsIcon icon={<EmailIcon />} value={email} />
       </ContactsItem>
       <ContactsItem
         caption="Время работы"
+        isItemHidden={true}
         value={handleOpenHours(open || [])}
       />
     </ContactsWrapper>

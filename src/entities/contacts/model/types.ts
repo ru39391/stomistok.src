@@ -9,6 +9,8 @@ export interface IContactsItem {
   caption?: string;
   value?: string;
   classMod?: string;
+  isItemHidden?: boolean;
+  isCaptionHidden?: boolean;
   url?: string;
   children?: ReactNode;
 }
