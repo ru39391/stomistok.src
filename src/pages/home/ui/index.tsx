@@ -9,7 +9,7 @@ import { Testimonials } from '@features/testimonials';
 const HomePage: FC = () => {
   return (
     <Layout>
-      <Testimonials /><hr />
+      <Testimonials />
       <Hardware /><hr />
       <Doctors /><hr />
       <Depts /><hr />

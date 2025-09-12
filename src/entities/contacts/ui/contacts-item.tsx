@@ -10,7 +10,7 @@ const ContactsItem: FC<IContactsItem> = ({ caption, children, classMod, isCaptio
       {caption ? <div className={`text-xs text-cyan-500 mb-1 ${isCaptionHidden ? 'hidden md:block' : ''}`}>{caption}:</div> : ''}
       {url
         ? <a
-            className={`transition border-transparent xl:pb-1 xl:border-b-1 ${classMod || ''}`}
+            className={`transition-all border-transparent xl:pb-1 xl:border-b-1 ${classMod || ''}`}
             href={url}
             title={caption}
           >

@@ -1,7 +1,7 @@
 @reference '../../../shared/styles/helpers/utils.css';
 
 .social-item {
-  @apply d-flex-column d-flex-centered p-[16px] max-w-[50px] flex-[0_0_50px] h-auto rounded-[50%] transition;
+  @apply d-flex-column d-flex-centered p-[16px] max-w-[50px] flex-[0_0_50px] h-auto rounded-[50%] transition-all;
   flex: 0 0 50px;
   color: var(--color-white);
   background-color: --alpha(var(--color-slate-200) / 20%);

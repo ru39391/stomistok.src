@@ -16,7 +16,7 @@
   }
 
   .btn {
-    @apply d-flex-centered font-semibold rounded-full transition;
+    @apply d-flex-centered font-semibold rounded-full transition-all;
     cursor: pointer;
   }
 }

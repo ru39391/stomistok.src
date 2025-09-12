@@ -1,1 +1,1 @@
-export { default as TestimonialItem } from './ui';
+export * from './ui';

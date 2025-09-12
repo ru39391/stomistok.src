@@ -1,7 +1,7 @@
 import type { TTestimonialData } from '@entities/testimonial/types';
 import type { TTestimonialsResData } from '../types';
 
-const handleTestimonialData = (items: TTestimonialsResData['data']): (Omit<TTestimonialData, 'rating'> & { rating: string[]; isExpanderVisible: boolean; })[] => {
+const handleTestimonialData = (items: TTestimonialsResData['data']): (Omit<TTestimonialData, 'rating'> & { rating: boolean[]; isExpanderVisible: boolean; })[] => {
   const testimonials = items.filter(({ isHidden }) => isHidden === 0);
 
   return testimonials.map(({ name, intro, props: { content }, createdon, rating, ...data }) => {
@@ -12,10 +12,9 @@ const handleTestimonialData = (items: TTestimonialsResData['data']): (Omit<TTest
       ...data,
       name: intro,
       intro: name.replace(intro, ''),
-      // TODO: настроить обработку тэгов в content
-      props: { content, desc, rating: rating.toString()},
+      props: { content, desc, rating: Number(rating)},
       createdon: dateArr.split('-').reverse().join('.'),
-      rating: [...Array(rating)].map((_, index) => (index + 1).toString()),
+      rating: [...Array(5)].map((_, index) => index + 1 <= Number(rating)),
       isExpanderVisible: content.length > 115
     }
   })

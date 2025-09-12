@@ -21,7 +21,7 @@ const NavTopList: FC = () => {
             menutitle,
             pagetitle,
             uri
-          }) => <a key={id.toString()} className="px-4 transition border-transparent py-4 font-semibold text-neutral-700 hover:text-cyan-600 hover:border-cyan-600  lg:px-0 xl:border-b-1 xl:py-0 xl:pb-1" href={uri}>{menutitle || pagetitle}</a>
+          }) => <a key={id.toString()} className="px-4 transition-all border-transparent py-4 font-semibold text-neutral-700 hover:text-cyan-600 hover:border-cyan-600  lg:px-0 xl:border-b-1 xl:py-0 xl:pb-1" href={uri}>{menutitle || pagetitle}</a>
         )}
       </nav>
       <div className="flex gap-2">
